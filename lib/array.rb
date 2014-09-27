@@ -1,9 +1,12 @@
 class Array
 
-	def newinject(argument=0)
-		accumulator = argument
-		self.each do |number|
-			accumulator = accumulator + number
+	def newinject(accumulator=nil)
+		self.each_with_index do |number, index|
+			if  index ==0 && accumulator == nil 
+				accumulator = number
+			else
+				accumulator = yield(accumulator, number)
+			end
 		end
 		accumulator
 	end
