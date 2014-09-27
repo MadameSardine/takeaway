@@ -7,4 +7,8 @@ class LineItem
 		@quantity = quantity
 	end
 
+	def total
+		dish.price * quantity
+	end
+
 end

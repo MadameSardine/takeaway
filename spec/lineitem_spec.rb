@@ -13,4 +13,8 @@ describe LineItem do
 		expect(lineitem.quantity.class).to eq(Fixnum)
 	end
 
+	it "should calculate a total cost" do
+		expect(lineitem.total).to eq(lineitem.quantity * lineitem.dish.price)
+	end
+
 end
