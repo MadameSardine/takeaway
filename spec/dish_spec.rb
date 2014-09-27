@@ -9,6 +9,6 @@ describe Dish do
 	end
 
 	it "should have a price" do
-		expect(dish.price.class).to eq(Fixnum)
+		expect(dish.price.class).to eq(Float)
 	end
 end
