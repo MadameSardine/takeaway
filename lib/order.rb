@@ -18,4 +18,9 @@ class Order
 		lineitems.count
 	end
 
+	def grand_total
+		lineitems.map{|lineitem| lineitem.total}.inject(&:+)
+	end
+
+
 end
