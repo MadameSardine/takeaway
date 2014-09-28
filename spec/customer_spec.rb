@@ -12,4 +12,9 @@ describe Customer do
 	it "can place an order" do
 		expect{customer.place_order(order)}.to change{customer.order_count}.by 1
 	end
+
+	it "can cancel an order" do
+		customer.place_order(order)
+		expect{customer.cancel_order(order)}.to change{customer.order_count}.by -1
+	end
 end
