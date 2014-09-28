@@ -13,4 +13,9 @@ describe Takeaway do
 		expect{takeaway.add_customer(customer)}.to change{takeaway.customer_count}.by 1
 	end
 
+	it "can remove a customer" do
+		takeaway.add_customer(customer)
+		expect{takeaway.remove_customer(customer)}.to change{takeaway.customer_count}.by -1
+	end
+
 end

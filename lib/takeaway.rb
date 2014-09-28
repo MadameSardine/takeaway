@@ -13,6 +13,10 @@ class Takeaway
 	def add_customer(customer)
 		customers << customer
 	end
+
+	def remove_customer(customer_to_remove)
+		customers.reject!{|customer| customer ==  customer_to_remove}
+	end
 	
 
 end
