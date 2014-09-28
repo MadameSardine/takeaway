@@ -2,11 +2,12 @@ require 'twilio-ruby'
 
 class Sms
 
-	attr_accessor :sender_number, :content
+	attr_accessor :sender_number, :content, :order
 
-	def initialize
+	def initialize(order)
 		@sender_number = "+44 1274 451678"
-		@content = "Your order was placed and will be delivered in the next 20 minutes. Thank you for your custom!"
+		@content = "Your order (#{order.to_s}) was placed and will be delivered in the next 20 minutes. Thank you for your custom!"
+		@order = order
 	end
 
 
@@ -17,7 +18,7 @@ class Sms
 
 # @client = Twilio::REST::Client.new account_sid, auth_token
 
-# @message = @client.account.messages.create({:to => "+447812832895", :from => "+44 1274 451678", :body => "Hello there!"})
+# @message = @client.account.messages.create({:to => "+447812832895", :from => "+44 1274 451678", :body => "Your order was placed and will be delivered in the next 20 minutes. Thank you for your custom!"})
 
 
 end
