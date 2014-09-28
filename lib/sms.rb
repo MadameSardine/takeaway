@@ -2,10 +2,11 @@ require 'twilio-ruby'
 
 class Sms
 
-	attr_accessor :sender_number
+	attr_accessor :sender_number, :content
 
 	def initialize
 		@sender_number = "+44 1274 451678"
+		@content = "Your order was placed and will be delivered in the next 20 minutes. Thank you for your custom!"
 	end
 
 
