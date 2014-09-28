@@ -31,4 +31,9 @@ describe Takeaway do
 		expect{takeaway.take_order(order)}.to change{takeaway.order_count}.by 1
 	end
 
+	it "can fulfill an order" do
+		takeaway.take_order(order)
+		expect{takeaway.fulfill(order)}.to change{takeaway.order_count}.by -1
+	end
+
 end

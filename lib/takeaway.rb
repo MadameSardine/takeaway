@@ -27,6 +27,10 @@ class Takeaway
 	def take_order(order)
 		orders << order
 	end
+
+	def fulfill(order_fulfilled)
+		orders.reject!{|order| order ==  order_fulfilled}
+	end
 	
 
 end

@@ -9,7 +9,7 @@
 ### Customer (order, takeaway)
 * can select dishes from menu
 * can place an order
-* can cancel an order
+* can cancel/remove an order
 
 ### Menu (dish)
 * shows list of dishes
