@@ -13,16 +13,16 @@
 ### Menu (dish)
 * shows list of dishes
 
-### Order (line items, takeaway)
-* shows line items
+### Order (line items, takeaway, customer)
+* shows lineitem
 * calculates takeaway total
 
-### Line item (dish, order)
+### Lineitem (dish, order)
 * has a dish
 * has quantity per dish
 * calculates total per dish
 
-### Dish (line order)
+### Dish (lineitem, order)
 * has a name
 * has a price
 
