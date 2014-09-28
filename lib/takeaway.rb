@@ -11,7 +11,7 @@ class Takeaway
 		orders.count
 	end
 
-	def take_order(order)
+	def take_order(order, customer)
 		orders << order
 	end
 
@@ -19,7 +19,7 @@ class Takeaway
 		orders.reject!{|order| order ==  order_fulfilled}
 	end
 
-	def send_confirmation(order)
+	def send_confirmation(order, customer)
 		true
 	end
 	
