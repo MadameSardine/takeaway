@@ -4,6 +4,7 @@ describe Takeaway do
 
 	let(:takeaway) {Takeaway.new}
 	let(:customer) {double :customer}
+	let(:order) {double :order}
 
 	it "should have no customers" do
 		expect(takeaway.customers).to be_empty
@@ -24,6 +25,10 @@ describe Takeaway do
 
 	it "shouldn't have orders" do
 		expect(takeaway.order_count).to eq(0)
+	end
+
+	it "can take an order from a customer" do
+		expect{takeaway.take_order(order)}.to change{takeaway.order_count}.by 1
 	end
 
 end

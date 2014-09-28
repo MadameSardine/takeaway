@@ -23,6 +23,10 @@ class Takeaway
 	def order_count
 		orders.count
 	end
+
+	def take_order(order)
+		orders << order
+	end
 	
 
 end
