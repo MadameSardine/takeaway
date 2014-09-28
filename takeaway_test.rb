@@ -17,24 +17,11 @@ housewine = Dish.new("House wine", 18)
 bruschetta = Dish.new("Bruschetta", 8)
 tricolore = Dish.new("Tricolore", 8)
 
-# Create an 'italian' menu with the dishes above
+# Create an 'italian' menu including the dishes above
 italian = Menu.new([pizza, pasta, tiramisu, pannacotta, chianti, housewine, bruschetta, tricolore])
 
 # Create an instance of the Takeaway class, named 'daMario', which offers the 'italian' menu for takeaway
 daMario = Takeaway.new(italian)
-
-# Create a new customer 'Sandrine'
-sandrine = Customer.new("Sandrine", "07000000000")
-
-# Create some line items (i.e. a list of dishes and their quantity)
-starter = LineItem.new(bruschetta, 2)
-main = LineItem.new(pizza, 2)
-dessert1 = LineItem.new(pannacotta, 1)
-dessert2 = LineItem.new(tiramisu, 1)
-drink = LineItem.new(chianti, 1)
-
-# Create a new order 'sandrinesorder', placed by the customer 'Sandrine' and including the items form the list above
-sandrinesorder = Order.new(sandrine, [starter, main, dessert1, dessert2, drink])
 
 # Print daMario's menu for takeaway
 puts "daMario's Italian takeaway menu:"
@@ -44,6 +31,22 @@ italian.dishes.each do |dish|
 
 # Print daMario's current open orders (should be equal to zero)
 puts "daMario has currently #{daMario.order_count} open orders."
+
+# Create a new customer 'Sandrine'
+sandrine = Customer.new("Sandrine", "07000000000")
+
+# Create a new order 'sandrinesorder', placed by the customer 'Sandrine' 
+sandrinesorder = Order.new(sandrine, [])
+
+# Create some line items (i.e. a list of dishes and their quantity) and add them to 'sandrinesorder'
+starter = LineItem.new(bruschetta, 2)
+main = LineItem.new(pizza, 2)
+dessert1 = LineItem.new(pannacotta, 1)
+dessert2 = LineItem.new(tiramisu, 1)
+drink = LineItem.new(chianti, 1)
+[starter, main, dessert1, dessert2, drink].each do |item|
+	sandrinesorder.add_lineitem(item)
+end
 
 # Print the list of items ordered by the customer, with a subtotal per item, and a grand total for the order
 puts "daMario takes the following order from #{sandrine.name}:"
