@@ -1,9 +1,9 @@
 # Takeaway CRC cards
 
-### Takeaway (order, customer, menu, sms)
+### Takeaway (order, customer, menu)
 * has a menu
-* can take orders
-* send text to customer to confirm order
+* take order from a customer
+* send text to customer to confirm order (sms module required)
 
 ### Customer (order, takeaway)
 * should have a name
@@ -12,9 +12,10 @@
 ### Menu (dish, takeaway)
 * shows list of dishes
 
-### Order (line items, takeaway, customer, SMS)
+### Order (line items, takeaway, customer)
 * shows lineitem
 * calculates takeaway total
+* is linked to a customer
 
 ### Lineitem (dish, order)
 * has a dish
@@ -24,5 +25,7 @@
 ### Dish (lineitem, order)
 * has a name
 
-### SMS (order, takeaway)
+### SMS module
+See Gemfile
+
 
