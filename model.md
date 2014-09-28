@@ -8,7 +8,8 @@
 
 ### Customer (order, takeaway)
 * can select dishes from menu
-* can place orders at takeaways
+* can place an order
+* can cancel an order
 
 ### Menu (dish)
 * shows list of dishes

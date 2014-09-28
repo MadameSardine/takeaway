@@ -6,4 +6,13 @@ class Takeaway
 		@customers = customers
 	end
 
+	def customer_count
+		customers.count
+	end
+
+	def add_customer(customer)
+		customers << customer
+	end
+	
+
 end
