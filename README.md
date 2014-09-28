@@ -21,6 +21,10 @@ Implement the following functionality for a takeaway system:
 * Use twilio-ruby gem to access the API.
 * Use a Gemfile to manage gems.
 
+## Links
+* [CRC model](https://github.com/MadameSardine/takeaway/blob/master/model.md)
+* [Twilio Ruby Helper](https://www.twilio.com/docs/ruby/install)
+
 ## How to use it
 
 To test the code, run the following command. (A text will be sent to my mobile phone everytime the test is run...please don't do it too often!)
