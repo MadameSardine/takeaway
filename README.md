@@ -20,3 +20,11 @@ Implement the following functionality for a takeaway system:
 * The text sending functionality should be implemented using Twilio API.
 * Use twilio-ruby gem to access the API.
 * Use a Gemfile to manage gems.
+
+## How to use it
+
+To test the code, run the following command. (A text will be sent to my mobile phone everytime the test is run...please don't do it too often!)
+
+```ruby
+ruby takeaway_test.rb
+```
