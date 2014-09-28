@@ -17,4 +17,8 @@ describe Customer do
 		customer.place_order(order)
 		expect{customer.cancel_order(order)}.to change{customer.order_count}.by -1
 	end
+
+	it "should have a name" do
+		expect(customer.name).not_to be_nil
+	end
 end

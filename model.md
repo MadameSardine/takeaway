@@ -7,6 +7,8 @@
 * send text to customer to confirm order
 
 ### Customer (order, takeaway)
+* should have a name
+* should have a phone number
 * can select dishes from menu
 * can place an order
 * can cancel/remove an order
