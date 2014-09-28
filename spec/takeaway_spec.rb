@@ -22,4 +22,9 @@ describe Takeaway do
 		expect{takeaway.fulfill(order)}.to change{takeaway.order_count}.by -1
 	end
 
+	it "should send a text to customer to confirm order" do
+		expect(takeaway.send_confirmation(order)).to be true
+		takeaway.take_order(order)
+	end
+
 end

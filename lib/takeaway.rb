@@ -18,6 +18,9 @@ class Takeaway
 	def fulfill(order_fulfilled)
 		orders.reject!{|order| order ==  order_fulfilled}
 	end
-	
 
+	def send_confirmation(order)
+		true
+	end
+	
 end
