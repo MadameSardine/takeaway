@@ -1,6 +1,6 @@
 # Takeaway CRC cards
 
-### Takeaway (order, customer, menu)
+### Takeaway (order, customer, menu, sms)
 * has a menu
 * can take orders
 * send text to customer to confirm order
@@ -12,7 +12,7 @@
 ### Menu (dish, takeaway)
 * shows list of dishes
 
-### Order (line items, takeaway, customer)
+### Order (line items, takeaway, customer, SMS)
 * shows lineitem
 * calculates takeaway total
 
@@ -23,5 +23,6 @@
 
 ### Dish (lineitem, order)
 * has a name
-* has a price
+
+### SMS (order, takeaway)
 
