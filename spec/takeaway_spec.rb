@@ -18,4 +18,8 @@ describe Takeaway do
 		expect{takeaway.remove_customer(customer)}.to change{takeaway.customer_count}.by -1
 	end
 
+	it "should have a menu" do
+		expect(takeaway.menu).not_to be nil
+	end
+
 end

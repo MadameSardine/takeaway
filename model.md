@@ -1,7 +1,7 @@
 # Takeaway CRC cards
 
 ### Takeaway (order, customer, menu)
-* has customers
+* can have, add and remove customers
 * has a menu
 * can take orders
 * send text to customer to confirm order

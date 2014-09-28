@@ -1,9 +1,10 @@
 class Takeaway
 
-	attr_accessor :customers
+	attr_accessor :customers, :menu
 
-	def initialize(customers=[])
+	def initialize(customers=[], menu=Menu.new)
 		@customers = customers
+		@menu = menu
 	end
 
 	def customer_count
