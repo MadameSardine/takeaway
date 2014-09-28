@@ -3,8 +3,8 @@ require 'takeaway'
 describe Takeaway do 
 
 	let(:takeaway) {Takeaway.new}
-	let(:order) {double :order}
-	let(:customer) {double :customer}
+	let(:order) {double :order, grand_total: true}
+	let(:customer) {double :customer, name: true}
 
 	it "should have a menu" do
 		expect(takeaway.menu).not_to be nil
@@ -23,8 +23,8 @@ describe Takeaway do
 		expect{takeaway.fulfill(order)}.to change{takeaway.order_count}.by -1
 	end
 
-	it "should send a text to customer to confirm order" do
-		expect(takeaway.send_confirmation(order, customer)).to be true
+	it "should send a text to customer to confirm order is placed" do
+		expect(takeaway).to receive(:send_confirmation)
 		takeaway.take_order(order, customer)
 	end
 
