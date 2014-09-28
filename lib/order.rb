@@ -1,8 +1,9 @@
 class Order
 
-	attr_accessor :lineitems
+	attr_accessor :lineitems, :customer
 
-	def initialize(lineitems=[])
+	def initialize(customer=Customer.new, lineitems=[])
+		@customer = customer
 		@lineitems = lineitems
 	end
 

@@ -25,5 +25,9 @@ describe Order do
 		expect(order.grand_total).to eq(lineitem1.total + lineitem2.total)
 	end
 
+	it "should be linked to a customer" do
+		expect(order.customer).not_to be_nil
+	end
+
 
 end
