@@ -1,9 +1,10 @@
 class Customer
 
-	attr_accessor :orders, :name
+	attr_accessor :orders, :name, :phone
 
-	def initialize(name="NewCustomer", orders=[])
+	def initialize(name="NewCustomer", phone=07, orders=[])
 		@name = name
+		@phone = phone
 		@orders = orders
 	end
 
