@@ -1,10 +1,11 @@
 class Takeaway
 
-	attr_accessor :customers, :menu
+	attr_accessor :customers, :menu, :orders
 
-	def initialize(customers=[], menu=Menu.new)
+	def initialize(customers=[], menu=Menu.new, orders=[])
 		@customers = customers
 		@menu = menu
+		@orders = []
 	end
 
 	def customer_count
@@ -17,6 +18,10 @@ class Takeaway
 
 	def remove_customer(customer_to_remove)
 		customers.reject!{|customer| customer ==  customer_to_remove}
+	end
+
+	def order_count
+		orders.count
 	end
 	
 

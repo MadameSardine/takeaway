@@ -22,4 +22,8 @@ describe Takeaway do
 		expect(takeaway.menu).not_to be nil
 	end
 
+	it "shouldn't have orders" do
+		expect(takeaway.order_count).to eq(0)
+	end
+
 end
