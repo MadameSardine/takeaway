@@ -10,4 +10,12 @@ class Order
 		lineitems << lineitem
 	end
 
+	def remove_lineitem(lineitem_to_remove)
+		lineitems.reject!{|lineitem| lineitem == lineitem_to_remove }
+	end
+
+	def lineitem_count
+		lineitems.count
+	end
+
 end
