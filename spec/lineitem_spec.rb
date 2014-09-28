@@ -3,7 +3,7 @@ require 'lineitem'
 describe LineItem do
 
 	let(:lineitem) {LineItem.new}
-	let(:dish) {double :dish,  class: Dish }
+	let(:dish) {double :dish}
 	
 	it "should have a dish" do
 		expect(lineitem.dish).not_to be nil
